@@ -2,7 +2,7 @@
 --------------------------------
 Victor Barros e Silva dos Reis
 
-LinkedIn: https://www.linkedin.com/in/victor-barros-e-silva-dos-reis/
+LinkedIn: https://www.linkedin.com/in/victorreis-cientistadedados/
 --------------------------------
 # Projects:
 Collection of diverse data science and machine learning projects, mostly in Jupyter Notebooks format.
