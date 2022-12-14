@@ -387,8 +387,15 @@ def display_buy_sell_options(df, option, c):
                 values.append(row['price']*1.1)
 
     df_buy['sell_price'] = values
+    df_buy['revenue'] = df_buy['sell_price'] - df_buy['price']
+    revenue = str(round(df_buy['revenue'].sum(), 2))
+    revenue_avg = str(round(df_buy['revenue'].mean(), 2))
 
-    st.dataframe(df_buy[['id','zipcode','price','season','condition','price_med','price_med_summer','price_med_fall','price_med_winter','price_med_spring','buy','sell_price']])
+    st.dataframe(df_buy[['id','zipcode','price','season','condition','price_med','price_med_summer','price_med_fall','price_med_winter','price_med_spring','buy','sell_price','revenue']])
+    if option == 'rec':
+        st.write('Total revenue: $ ', revenue)
+        st.write('Average revenue per property: $ ', revenue_avg)
+
     return df_buy
 
 def display_price_map(df, geofile):
@@ -410,7 +417,7 @@ def display_price_map(df, geofile):
         marker_cluster = MarkerCluster().add_to(density_map)
         for name, row in df2.iterrows():
             folium.Marker([row['lat'], row['long']], 
-                popup='Sold R${0} on: {1}. Features: {2} sqft, {3} bedrooms, {4} bathrooms, year built: {5}'.format(
+                popup='Sold ${0} on: {1}. Features: {2} sqft, {3} bedrooms, {4} bathrooms, year built: {5}'.format(
                     row['price'], 
                     row['date'], 
                     row['sqft_living'],
@@ -670,7 +677,7 @@ if __name__ == "__main__":
         """
         - **Houses with over 11 bedrooms are considered to be outliers and thus are ignored.**
         - **Only the most recent data for a given property is consiered in the overview and map views, in case it has multiple entries.**
-        - **Values equal to 0 (zero) mean the feature is not applicable (e.g. does not have waterview, was not renovated, does not have basement/attic, and so on.**
+        - **Values equal to 0 (zero) mean the feature is not applicable (e.g. does not have waterfront, was not renovated, does not have basement, and so on.**
         """
         )
 
