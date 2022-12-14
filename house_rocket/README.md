@@ -11,11 +11,14 @@ O projeto em questão aborda a criação uma solução completa, na forma de um 
 
 # 1. Descrição - Questões de Negócio
 Encontrar as melhores oportunidades de negócio: compra de casas em boas condições e com preços baixos, e venda desses imóveis adquiridos por um preço superior e justo. Os atributos dos imóveis, tais como localização, número de cômodos, áreas e datas de construção e reforma influenciam diretamente na sua atratividade e preço.
+
 **1. Quais imóveis a empresa deve adquirir e por qual preço?**
+
 **2. Para os imóveis adquiridos, quando é o melhor momento para vendê-los e por qual preço?**
 
 # 2. Dataset e atributos
-Originalmente baixado em <url>https://www.kaggle.com/harlfoxem/housesalesprediction/discussion/207885</url>. O dataset contém dados de propriedades na cidade de Seattle/USA. Definições dos atributos relevantes:
+Originalmente baixado em <url>https://www.kaggle.com/harlfoxem/housesalesprediction/discussion/207885</url>. O dataset contém dados de propriedades na cidade de Seattle/USA.
+Definições dos atributos relevantes:
 
 |    Atributo     |                         Descrição                            |
 | :-------------: | :----------------------------------------------------------: |
@@ -37,8 +40,8 @@ Originalmente baixado em <url>https://www.kaggle.com/harlfoxem/housesalespredict
 |     zipcode     |                  CEP da localização do imóvel                |
 |       lat       |                           Latitude                           |
 |      long       |                          Longitude                           |
-| sqft_livining15 | Medida em pés quadrados da área total interior de habitação para os 15 vizinhos mais próximo |
-|   sqft_lot15    | Medida em pés quadrados da área total do terreno dos 15 vizinhos mais próximo |
+| sqft_livining15 | Medida em pés quadrados da área total interior de habitação para os 15 vizinhos mais próximos |
+|   sqft_lot15    | Medida em pés quadrados da área total do terreno dos 15 vizinhos mais próximos |
 
 
 # 3. Premissas do Negócio
