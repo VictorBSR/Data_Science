@@ -37,11 +37,32 @@ def get_data( path ):
         data.round({'price': 2})
         data['price_sqft'] = data['price'] / data['sqft_lot']
 
-        full_data = data.copy()
         #consider only most recent entry for same ids
         new_data = data.sort_values('date').drop_duplicates('id',keep='last')
 
-        return (new_data, full_data)
+        return new_data
+    except:
+        st.write( 'Error in obtaining data.' )
+        return None
+
+def get_full_data( path ):
+    try:
+        data = pd.read_csv( path )
+
+        #adjustments
+        data['date'] = pd.to_datetime( data['date'] )
+        #data['year'] = pd.to_datetime(data['date']).dt.strftime('%Y')
+        data.drop(data[data.bedrooms == 33].index, inplace=True) # typo
+        data['bathrooms'] = np.round(data['bathrooms']).astype(int)
+        data['floors'] = np.round(data['floors']).astype(int)
+
+        #new columns
+        data.round({'price': 2})
+        data['price_sqft'] = data['price'] / data['sqft_lot']
+
+        full_data = data.copy()
+
+        return full_data
     except:
         st.write( 'Error in obtaining data.' )
         return None
@@ -645,9 +666,10 @@ if __name__ == "__main__":
 
         # load data
         #path = 'kc_house_data.csv'
-        path = 'https://www.kaggle.com/datasets/harlfoxem/housesalesprediction?select=kc_house_data.csv'
+        path = 'https://raw.githubusercontent.com/VictorBSR/Data_Science/main/house_rocket/kc_house_data.csv'
         url='https://opendata.arcgis.com/datasets/83fc2e72903343aabff6de8cb445b81c_2.geojson'
-        data, full_data = get_data( path )
+        data = get_data( path )
+        full_data = get_full_data( path )
         geofile = get_geofile( url )
 
         # transform data with filters
