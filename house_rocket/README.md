@@ -18,6 +18,7 @@ Encontrar as melhores oportunidades de negócio: compra de casas em boas condiç
 
 # 2. Dataset e atributos
 Originalmente baixado em <url>https://www.kaggle.com/harlfoxem/housesalesprediction/discussion/207885</url>. O dataset contém dados de propriedades na cidade de Seattle/USA.
+
 Definições dos atributos relevantes:
 
 |    Atributo     |                         Descrição                            |
@@ -46,7 +47,7 @@ Definições dos atributos relevantes:
 
 # 3. Premissas do Negócio
 As seguintes premissas foram adotadas para o dataset e o projeto como um todo:
-- Imóveis com mais de 11 quartos foram considerados outliers e dessa forma. ignorados
+- Imóveis com mais de 11 quartos foram considerados outliers e dessa forma, ignorados.
 - Na maioria das análises (exceto de evolução de preço ao longo do tempo), foi considerado somente o registro mais recente para cada propriedade, no caso dela ter múltiplas ocorrências em períodos distintos.
 - Valores iguais a 0 (zero) significam que aquele atributo não está presente ou não é aplicável (ex.: não faz fronteira com a água, não sofreu reforma, não possui porão, etc.) e aqueles iguais a 1 (um) siginificam que tal atributo está presente.
 
@@ -71,7 +72,7 @@ Foram adotadas as seguintes etapas, que guiaram a evolução deste projeto:
 | **H5** - Propriedades que foram construídas antes de 1955 e que sofreram reforma possuem preço acima de 20% acima daquelas que não foram reformadas ou que foram construídas em outro período | Verdadeiro      | Comprar imóveis antigos e que foram reformados, pois o preço de venda é cerca de 32% acima do que a média dos outros   |
 
 # 6. Resultados
-Após analisados os insights, criou-se uma tabela com as recomendações de compra e sugestões de preço de venda, além de visualizações das propriedades em mapas de acordo com cada CEP e filtro disponível. O critério adotado para determinar se um imóvel é viável ou não para compra pela empresa foi se o seu ***preço de venda é igual ou menor do que o preço mediano dos imóveis na região (CEP)*** que ele se encontra e se as ***condições do imóvel forem boas ou excelentes***. Já a sugestão para preço de venda é estabelecida como 30% maior do que o valor adquirido se o ***preço de compra for menor do que a mediana dos preços da região para aquela determinada estação do ano***, ou 10% maior caso não seja. Essa estratégia visa explorar as oportunidades de compra por preços bem abaixo do valor comum e a compensação financeira de se vender de acordo com cada estação do ano.
+Após analisados os insights, criou-se uma tabela com as recomendações de compra e sugestões de preço de venda, além de visualizações das propriedades em mapas de acordo com cada CEP (zipcode) e filtro disponível. O critério adotado para determinar se um imóvel é viável ou não para compra pela empresa foi se o seu ***preço de venda é igual ou menor do que o preço mediano dos imóveis na região (CEP)*** que ele se encontra e se as ***condições do imóvel forem boas ou excelentes***. Já a sugestão para preço de venda é estabelecida como 30% maior do que o valor adquirido se o ***preço de compra for menor do que a mediana dos preços da região para aquela determinada estação do ano***, ou 10% maior caso não seja. Essa estratégia visa explorar as oportunidades de compra por preços bem abaixo do valor comum e a compensação financeira de se vender de acordo com cada estação do ano.
 
 O valor estimado de lucro para a empresa, caso todos as sugestões de negócio (todas as operações de compra e venda recomendadas) fossem realizadas seria aproximadamente de **$ 1,201,195,000.00** .
 
@@ -81,7 +82,7 @@ As hipóteses de negócio, ao se tornarem insights de negócio, forneceram enten
 - Comprar imóveis próximos da água no outono e no inverno, e vendê-los na primavera e verão
 - Priorizar compra de imóveis antigos e não reformados e realizar reformas, uma vez que reformado seu preço de revenda aumenta consideravelmente
 
-Agrupar os imóveis por região (CEP, ou zipcode) permitiu uma análise visual e geográfica quanto a suas localizações, e permitiu que se considerasse os preços medianos de cada região como parâmetro decisivo das recomendações de negócio. A escolha da mediana como baseline para análise de preços foi adotada tendo em vista minimizar o efeito de outliers, mas uma outra possibilidade seria levar em conta ambas média e mediana para se avaliar a dispersão dos preços por região.
+Agrupar os imóveis por região permitiu uma análise visual e geográfica quanto a suas localizações, e permitiu que se considerasse os preços medianos de cada região como parâmetro decisivo das recomendações de negócio. A escolha da mediana como baseline para análise de preços foi adotada tendo em vista minimizar o efeito de outliers, mas uma outra possibilidade seria levar em conta ambas média e mediana para se avaliar a dispersão dos preços por região.
 O objetivo principal de se responder as duas questões de negócio foram atingidos com êxito, e a solução ainda abarca diversas funcionalidades e visualizações interessantes e interativas, permitindo que o CEO faça diversos tipos de análise de acordo com sua necessidade. A plataforma escolhida para se realizar o deploy não é a melhor em termos de performance, mas ela atende a premissa analítica e suporta o carregamento do dataset de diversas fontes, sendo elas um banco local, uma página web ou até mesmo um data warehouse ou data lake/data lakehouse. Além disso é possível ser escalada e adaptada para outros datasets e áreas da empresa.
 
 Como próximos passos seria possível estender a análise para demais regiões e datasets, criação de outras features e uma análise de predição de preços de compra e venda, tendo em vista a valorização do imóvel representada por séries temporais.
