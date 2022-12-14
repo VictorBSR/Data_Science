@@ -626,7 +626,7 @@ if __name__ == "__main__":
         ### 1. INTRODUCTION ###
         c1, c2, c3 = st.columns(3)
         icon= 'https://github.com/VictorBSR/Data_Science/blob/main/house_rocket/icon.png?raw=true'
-        st.image(icon, width=350)
+        c2.image(icon, width=350)
         st.markdown("<h1 style='text-align: center; color: black;'>House Rocket - Dashboard</h1>", unsafe_allow_html=True)
         st.markdown( '### House Prices Data Analysis' )
         st.write('*House Rocket* is a fictional company which deals with real estate operations (purchase and sales of properties) in the city of Seattle/USA. The main goal of this page is to provide useful insights, graphs, maps and a general overview of the houses data in order to aid quick and effective decision making by the board of directors, posing as a modern and smart approach instead of manual analysis of the large amount of data provided.')
@@ -644,7 +644,8 @@ if __name__ == "__main__":
         ### 3. DATA OVERVIEW ###
 
         # load data
-        path = 'kc_house_data.csv'
+        #path = 'kc_house_data.csv'
+        path = 'https://www.kaggle.com/datasets/harlfoxem/housesalesprediction?select=kc_house_data.csv'
         url='https://opendata.arcgis.com/datasets/83fc2e72903343aabff6de8cb445b81c_2.geojson'
         data, full_data = get_data( path )
         geofile = get_geofile( url )
