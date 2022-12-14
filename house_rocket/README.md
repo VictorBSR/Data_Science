@@ -2,20 +2,20 @@
 
 ![icon](https://user-images.githubusercontent.com/42360197/207433028-735a3b18-1aa9-432f-9d16-6d2f027a0d64.png)
 
-House Rocket é uma empresa fictícia que visa analisar dados de propriedades e realizar operações de compra e venda, maximizado o lucro e levando em conta principalmente:
-* As condições do imóvel e
-* A época do ano
+House Rocket é uma empresa fictícia que visa analisar dados de propriedades (imóveis) e realizar operações de compra e venda, maximizado o lucro e levando em conta principalmente:
+- As condições do imóvel e
+- A época do ano
 
 O projeto em questão visa criar uma solução completa, na forma de um painel interativo hospedado na nuvem, para análise do ponto de vista do CEO da empresa sobre quais são os melhores negócios disponíveis no mercado. O painel inclui visualizações, análise de estatística descritiva, insights de negócio e recomendações de compra e venda.
 
 
 # 1. Descrição - Questões de Negócio
 Encontrar as melhores oportunidades de negócio: compra de casas em boas condições e com preços baixos, e venda desses imóveis adquiridos por um preço superior e justo. Os atributos dos imóveis, tais como localização, número de cômodos, áreas e datas de construção e reforma influenciam diretamente na sua atratividade e preço.
-**1. Quais imóveis a empresa deve adquirir e por qual preço? **
-**2. Para os imóveis adquiridos, quando é o melhor momento para vendê-los e por qual preço? **
+- **1. Quais imóveis a empresa deve adquirir e por qual preço? **
+- **2. Para os imóveis adquiridos, quando é o melhor momento para vendê-los e por qual preço? **
 
 # 2. Dataset e atributos
-Originalmente baixado em <url>https://www.kaggle.com/harlfoxem/housesalesprediction/discussion/207885</url>. Definições dos atributos relevantes:
+Originalmente baixado em <url>https://www.kaggle.com/harlfoxem/housesalesprediction/discussion/207885</url>. O dataset contém dados de propriedades na cidade de Seattle/USA. Definições dos atributos relevantes:
 
 |    Atributo     |                         Descrição                            |
 | :-------------: | :----------------------------------------------------------: |
