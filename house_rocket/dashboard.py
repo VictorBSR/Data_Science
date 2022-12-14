@@ -625,7 +625,8 @@ if __name__ == "__main__":
     try:
         ### 1. INTRODUCTION ###
         c1, c2, c3 = st.columns(3)
-        c2.image('icon.png')
+        icon= 'https://github.com/VictorBSR/Data_Science/blob/main/house_rocket/icon.png'
+        c2.image(icon)
         st.markdown("<h1 style='text-align: center; color: black;'>House Rocket - Dashboard</h1>", unsafe_allow_html=True)
         st.markdown( '### House Prices Data Analysis' )
         st.write('*House Rocket* is a fictional company which deals with real estate operations (purchase and sales of properties) in the city of Seattle/USA. The main goal of this page is to provide useful insights, graphs, maps and a general overview of the houses data in order to aid quick and effective decision making by the board of directors, posing as a modern and smart approach instead of manual analysis of the large amount of data provided.')
