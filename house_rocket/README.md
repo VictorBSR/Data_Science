@@ -2,11 +2,11 @@
 
 ![icon](https://user-images.githubusercontent.com/42360197/207433028-735a3b18-1aa9-432f-9d16-6d2f027a0d64.png)
 
-House Rocket é uma empresa fictícia que visa analisar dados de propriedades (imóveis) e realizar operações de compra e venda, maximizado o lucro e levando em conta principalmente:
+House Rocket é uma empresa fictícia que visa analisar dados de propriedades (imóveis) e realizar operações de compra e venda, maximizando o lucro e levando em conta principalmente:
 - As condições do imóvel e
 - A época do ano
 
-O projeto em questão visa criar uma solução completa, na forma de um painel interativo hospedado na nuvem, para análise do ponto de vista do CEO da empresa sobre quais são os melhores negócios disponíveis no mercado. O painel inclui visualizações, análise de estatística descritiva, insights de negócio e recomendações de compra e venda.
+O projeto em questão aborda a criação uma solução completa, na forma de um painel interativo hospedado na nuvem, para análise do ponto de vista do CEO da empresa sobre quais são os melhores negócios disponíveis no mercado. O painel inclui visualizações, análise de estatística descritiva, insights de negócio e recomendações de compra e venda.
 
 
 # 1. Descrição - Questões de Negócio
